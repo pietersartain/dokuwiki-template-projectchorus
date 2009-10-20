@@ -43,23 +43,21 @@ if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus';
 
 	<img src="<?php echo $DOKU_TPL?>images/cornerblack.png" alt="" id="cornerblack" />
 	<img src="<?php echo $DOKU_TPL?>images/cornerwhite.png" alt="" id="cornerwhite" />
-	<img src="<?php echo $DOKU_TPL?>images/projectchorus.png" alt="project:chorus" id="logo" />
 
 	<div id="content">
 		<div class="scrollarea">
 			<div class="xt">&nbsp;</div>
-		<div class="content">
-		<!-- wikipage start -->
-		<?php tpl_content()?>
-		<!-- wikipage stop -->	
-
-
+			<div class="content">
+			
+			<!-- wikipage start -->
+			<?php tpl_content()?>
+			<!-- wikipage stop -->
+			
+			</div>
+			<div class="xb">&nbsp;</div>
+			<div class="space">&nbsp</div>
+		</div>
 	</div>
-	<div class="xb">&nbsp;</div>
-	<div class="space">&nbsp</div>
-	</div>
-
-</div>
 
 	<div id="pageicons" class="footerinc">
 		<?php
@@ -70,12 +68,14 @@ if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus';
 		
 
 	<div id="menu">
-		<div class="menutitle"><div>project:chorus</div></div>
+		<div class="menutitle">
+			<div>project:chorus</div>
+		</div>
 		<div class="menulist">
-			<ul><a href=""><div>about</div></a></ul>
-			<ul><a href=""><div>who</div></a></ul>
-			<ul><a href=""><div>groups</div></a></ul>
-			<ul><a href=""><div>projects</div></a></ul>
+			<ul><a href="/people"><div>who</div></a></ul>
+			<ul><a href="/songs"><div>songs</div></a></ul>
+			<ul><a href="/projects"><div>projects</div></a></ul>
+			<ul><a href="/license"><div>license</div></a></ul>
 		</div>
 		<div id="menucontent" class="menucontent">&nbsp;</div>
 		<div class="menuright footerinc">
@@ -89,6 +89,10 @@ if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus';
 			
 		</div>
 	</div>
+	
+	<a href="/">
+	<img src="<?php echo $DOKU_TPL?>images/projectchorus.png" alt="project:chorus" id="logo" />
+	</a>
 	
 </div>
 

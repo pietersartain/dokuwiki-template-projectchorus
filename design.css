@@ -57,7 +57,7 @@ img#logo { position: absolute; left: 80px; top: 30%; }
 img#cornerblack { position: absolute; right: 0; bottom: 0; }
 img#cornerwhite { position: absolute; left: 0; top: 0; }
 
-div#content div.xt {position: relative; top: 18px; background: url('images/top.png') no-repeat 1px 0; height: 35px; }
+div#content div.xt {position: relative; top: 10px; background: url('images/top.png') no-repeat 1px 0; height: 35px; }
 div#content div.xb {position: relative; bottom: 18px; background: url('images/bottom.png') no-repeat -2px -20px; height: 32px; }
 
 /*.content h1 { background: #86870e;  padding: 3px !important; margin: 0; }*/
@@ -148,7 +148,7 @@ div.dokuwiki textarea.edit {
   color: __text__;
   background-color: __background__;
   border: 1px solid __border__;
-  padding: 0.3em 0 0 0.3em;
+  overflow: auto;
   width: 100%;
 }
 
@@ -196,7 +196,7 @@ div.dokuwiki textarea.edit[readonly],
 div.dokuwiki input.edit[disabled],
 div.dokuwiki input.edit[readonly],
 div.dokuwiki select.edit[disabled] {
-  background-color: __background_neu__!important;
+  /*background-color: __background_alt__!important;*/
   color: __text_neu__!important;
 }
 
@@ -503,7 +503,7 @@ div.dokuwiki blockquote {
 div.dokuwiki pre {
   font-size: 120%;
   padding: 0.5em;
-  border: 1px dashed __border__;
+  border: 1px solid __border__;
   color: __text__;
   overflow: auto;
 }
