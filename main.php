@@ -72,7 +72,7 @@ if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus';
 			<div>project:chorus</div>
 		</div>
 		<div class="menulist">
-			<ul><a href="/people"><div>who</div></a></ul>
+			<ul><a href="/about"><div>about</div></a></ul>
 			<ul><a href="/songs"><div>songs</div></a></ul>
 			<ul><a href="/projects"><div>projects</div></a></ul>
 			<ul><a href="/license"><div>license</div></a></ul>
