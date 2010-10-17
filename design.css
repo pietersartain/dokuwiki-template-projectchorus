@@ -22,13 +22,13 @@ body {
  */
 /* -------------- project:chorus specific elements --- */
 
-div#content ul {
+div#content ul#nav {
 	list-style-type: none;
 	position: relative;
 	top: 20px;
 }
 
-div#content ul li {
+div#content ul#nav > li {
 	border: 1px solid #555540;
 	border-bottom-color: black;
 	background: black;

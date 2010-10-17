@@ -24,7 +24,11 @@ function getRootNS($id){
 }
 
 function checkNS($ns) {
-	if ( (getRootNS(getID()) == $ns) || (noNSorNS(getID()) == $ns ) ) {
+	// This tests for root NS or pagename
+	//if ( (getRootNS(getID()) == $ns) || (noNSorNS(getID()) == $ns ) ) {
+	
+	// This version just tests the namespace, not a pagename.
+	if (getRootNS(getID()) == $ns) {
 		return true;
 	}
 	return false;
@@ -78,7 +82,7 @@ function getSongID() {
 			
 			$songid = getSongID();
 			
-			echo '<ul><li>';
+			echo '<ul id="nav"><li>';
 				tpl_pagelink(':songs:'.$songid,getTitle());
 			echo '</li><li>';
 				tpl_pagelink(':songs:'.$songid.':lyrics','Lyrics');
