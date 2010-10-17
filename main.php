@@ -13,6 +13,33 @@ if (!defined('DOKU_INC')) die();
 if (isset($DOKU_TPL)==FALSE) $DOKU_TPL = DOKU_TPL; 
 if (isset($DOKU_TPLINC)==FALSE) $DOKU_TPLINC = DOKU_TPLINC;
 if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus'; 
+
+// Handy function
+function getRootNS($id){
+	$pos = strpos((string)$id,':');
+	if($pos!==false){
+		return substr((string)$id,0,$pos);
+	}
+	return false;
+}
+
+function checkNS($ns) {
+	if ( (getRootNS(getID()) == $ns) || (noNSorNS(getID()) == $ns ) ) {
+		return true;
+	}
+	return false;
+}
+
+function getTitle() {
+	global $ID;
+	return p_get_first_heading($ID);
+}
+
+function getSongID() {
+	global $ID;
+	$arr = explode(':',$ID);
+	return $arr[1];
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -46,6 +73,23 @@ if (isset($CONF_TPL)==FALSE) $CONF_TPL = 'projectchorus';
 
 	<div id="content">
 		<div class="scrollarea">
+
+			<?php if (checkNS('songs')) { 
+			
+			$songid = getSongID();
+			
+			echo '<ul><li>';
+				tpl_pagelink(':songs:'.$songid,getTitle());
+			echo '</li><li>';
+				tpl_pagelink(':songs:'.$songid.':lyrics','Lyrics');
+			echo '</li><li>';
+				tpl_pagelink(':songs:'.$songid.':tab','Tab');
+			echo '</li><li>';
+				tpl_pagelink(':songs:'.$songid.':archive','Archive');
+			echo '</li></ul>';
+			
+			} ?>
+
 			<div class="xt">&nbsp;</div>
 			<div class="content">
 			
